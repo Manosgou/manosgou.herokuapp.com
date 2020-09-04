@@ -1,43 +1,33 @@
 {
-  "name": "personal-website",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.4.0",
-    "@testing-library/user-event": "^7.2.1",
-    "bootstrap": "^4.4.1",
-    "node-sass": "^4.13.1",
-    "react": "^16.12.0",
-    "react-bootstrap": "^1.0.0-beta.16",
-    "react-dom": "^16.12.0",
-    "react-native-fetch": "^2.0.0",
-    "react-router-bootstrap": "^0.25.0",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.3.1",
-    "react-social-icons": "^4.1.0",
-    "react-social-media-icons": "^1.1.0",
-    "ts-react-json-table": "^0.1.2"
-  },
+  "name": "manosgou.herokuapp.com",
+  "version": "1.0.0",
+  "description": "Personal website:https://manosgou.herokuapp.com/",
+  "main": "server.js",
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "build": "npm build --prefix client",
+    "install-client": "npm install --prefix client",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node app.js",
+    "server": "nodemon app.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manosgou/manosgou.herokuapp.com.git"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "Manos Gouvrikos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manosgou/manosgou.herokuapp.com/issues"
+  },
+  "homepage": "https://github.com/Manosgou/manosgou.herokuapp.com#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.11",
+    "nodemon": "^2.0.4"
   }
 }

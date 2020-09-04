@@ -1,0 +1,26 @@
+.NotFound {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  h1 {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+  }
+  P {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    text-align: center;
+  }
+  .btn{
+    font-family: "Poppins", sans-serif;
+    color: #292f36;
+    margin: 0 auto;
+    display: block;
+    transition: transform 0.4s;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+}

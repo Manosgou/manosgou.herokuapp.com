@@ -1,0 +1,22 @@
+.Projects {
+  margin-top: 110px;
+  h1 {
+    color: #fff;
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+  }
+  .table{
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    td{
+      a{
+        text-decoration: underline;
+        color: #292f36;
+        &:visited{
+          color: #0f4c75;
+        } 
+      }
+    }
+  }
+}
