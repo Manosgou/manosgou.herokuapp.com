@@ -7,8 +7,8 @@
     "build": "npm build --prefix client",
     "install-client": "npm install --prefix client",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "start": "node app.js",
-    "server": "nodemon app.js",
+    "start": "node server.js",
+    "server": "nodemon server.js",
     "client": "npm start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
