@@ -4,7 +4,7 @@
   "description": "Personal website:https://manosgou.herokuapp.com/",
   "main": "server.js",
   "scripts": {
-    "build": "npm build --prefix client",
+    "build": "npm run-script build --prefix client",
     "install-client": "npm install --prefix client",
     "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node server.js",
