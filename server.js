@@ -9,6 +9,10 @@ const port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
+if (process.env.NODE_ENV === "production") {
+  app.use(express.static("client/build"));
+}
+
 app.post("/api/send", (req, res) => {
   const output = `
       <p>You have a new contact request</p>
@@ -50,9 +54,6 @@ app.post("/api/send", (req, res) => {
   });
 });
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
