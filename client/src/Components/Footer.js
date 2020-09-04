@@ -24,7 +24,7 @@ function Footer() {
               </a>
             </li>
             <li className="list-inline-item">
-              <a className="btn-floating btn-gplus mx-1" href="/worksapce">
+              <a className="btn-floating btn-gplus mx-1" href="/workspace">
                 WORKSPACE
               </a>
             </li>
