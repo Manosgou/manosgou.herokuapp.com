@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const path = require('path');
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
 const app = express();
@@ -8,10 +9,6 @@ const port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
 
 app.post("/api/send", (req, res) => {
   const output = `
@@ -54,7 +51,10 @@ app.post("/api/send", (req, res) => {
   });
 });
 
-
+app.use(express.static(path.join(__dirname, 'client/build')))
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'client/build'))
+})
 app.listen(port, () =>
   console.log(`Example app listening at http://localhost:${port}`)
 );
