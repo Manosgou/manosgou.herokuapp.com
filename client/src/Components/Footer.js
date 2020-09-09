@@ -1,7 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { RiHeartLine } from "react-icons/ri";
-import { FaFacebook, FaInstagram, FaTelegram } from "react-icons/fa";
+import { FaFacebook, FaInstagram, FaTelegram,FaGithub} from "react-icons/fa";
 
 //styling
 import "./style/Footer.scss";
@@ -56,6 +56,11 @@ function Footer() {
             <li className="list-inline-item">
               <a href="https://t.me/Manosgou">
                 <FaTelegram style={{ height: 25, width: 25, color: "white" }} />
+              </a>
+            </li>
+            <li className="list-inline-item">
+              <a href="https://github.com/Manosgou">
+                <FaGithub style={{ height: 25, width: 25, color: "white" }} />
               </a>
             </li>
           </ul>
